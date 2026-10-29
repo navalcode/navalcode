@@ -67,6 +67,8 @@ A working example is [Spec Evidence Lab](https://github.com/navalcode/spec-evide
 
 My experience also includes Flutter, Android Automotive integration and GNSS investigations involving native interoperability and diagnostics. These areas involve different validation needs: a simulated integration, an emulator run and a physical-device result support different conclusions.
 
+A current original Flutter example is [Bitácora](https://github.com/navalcode/bitacora-flutter): request generations, acknowledged local persistence, English/Spanish resources and Android flavors. Its 22 controller/widget tests and native preferences journey have passed locally; the repository records its build and CI scope.
+
 Two historical learning examples are available here:
 
 - [Flutter Variants](https://github.com/navalcode/FlutterVariants): environment-specific entry points, configuration and flavor resources.

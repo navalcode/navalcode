@@ -1,26 +1,78 @@
 # Manuel Naval
 
-Desarrollo aplicaciones Android con Kotlin y Jetpack Compose. Me centro en la integración, la concurrencia, el ciclo de vida y las pruebas que permiten entender y mantener el comportamiento de una aplicación.
+**Android & mobile engineering · Kotlin · Jetpack Compose · AI-assisted development**
 
-También trabajo con Flutter y preparo herramientas de IA aplicadas al desarrollo, con contexto de proyecto, revisión y validación.
+**English** · [Español](https://github.com/navalcode/navalcode/blob/main/README.es.md)
 
-## Android para explorar
+I develop and maintain mobile applications, with Android as my main focus. My work combines feature development with the less visible engineering that keeps an application usable: lifecycle ownership, asynchronous state, SDK integration, compatibility, failure recovery and testing.
 
-| Proyecto | Qué puedes encontrar |
+I also work with Flutter and build reusable AI-assisted engineering workflows. I am particularly interested in making requirements, decisions and validation explicit enough that another developer—or another agent session—can continue the work with a reliable understanding of what has been implemented.
+
+## Android engineering
+
+My day-to-day technical interests and experience include:
+
+- **Kotlin, Coroutines and Flow:** structured concurrency, cancellation, dispatcher ownership, concurrent work, error propagation and observable UI state.
+- **Jetpack Compose:** state ownership, recomposition, effect keys, `LaunchedEffect`, `DisposableEffect`, resource cleanup and callbacks that remain current without restarting work.
+- **Architecture and boundaries:** ViewModel-driven presentation, repository and adapter contracts, separation of domain logic from Android, explicit dependencies and modules that reflect useful responsibilities.
+- **Persistence and recovery:** local data with Room, cached content during source failures, repeatable local operations and clear distinctions between loading, empty, stale and error states.
+- **Integration and maintenance:** third-party SDKs, background work, connectivity changes, platform compatibility, release configuration and diagnosing behavior that differs between debug and optimized builds.
+- **Testing:** fakes, virtual time, coroutine cancellation, state transitions, persistence tests and UI journeys that exercise recovery as well as success.
+
+I use architecture to make behavior easier to reason about and change. A small project can have explicit contracts and useful tests without needing the structure of a large application.
+
+## Selected Android labs
+
+These repositories use fictional, self-contained examples. Each has a focused question, code to inspect and tests or exercises that make the behavior observable.
+
+| Project | Technical focus | Suggested reading |
+|---|---|---|
+| [Coroutine Lab](https://github.com/navalcode/coroutine-lab) | Structured concurrency, cancellation, `launch`/`async`, exception handling and Flow operators | Follow the timelines, predict execution order and compare the examples with their tests. |
+| [Compose Effect Lab](https://github.com/navalcode/compose-effect-lab) | Effect keys, restarts, resource ownership and `rememberUpdatedState` | Change keys and callbacks, remove content from composition and inspect the recorded lifecycle. |
+| [Coroutines Tests Mini](https://github.com/navalcode/android-coroutines-tests-mini) | Coroutine and StateFlow tests, injectable dispatchers, fakes and virtual time | Start with the state model and ViewModel tests, then inspect cancellation and latest-query behavior. |
+
+## AI-assisted engineering
+
+My work with AI includes building and adapting reusable engineering methods. I have contributed to shared tooling and project-specific workflows around:
+
+| Area | What I work on |
 |---|---|
-| [Coroutine Lab](https://github.com/navalcode/coroutine-lab) | Ejemplos visuales de concurrencia estructurada, cancelación, operadores Flow y manejo de errores. |
-| [Compose Effect Lab](https://github.com/navalcode/compose-effect-lab) | Claves, reinicio de efectos y liberación de recursos con `LaunchedEffect`, `DisposableEffect` y `rememberUpdatedState`. |
-| [Coroutines Tests Mini](https://github.com/navalcode/android-coroutines-tests-mini) | Pruebas de coroutines y StateFlow con tiempo virtual, fakes y cancelación. |
+| **Project context** | Architecture notes, conventions, configuration, precedence rules and concise entry points that load relevant detail when needed. |
+| **Skills and tools** | Reusable task instructions, MCP-based context delivery, structured inputs and outputs, and integration with existing development tools. |
+| **Implementation and review** | Defining the task, examining actual code, comparing alternatives, making reviewable changes and validating the result. |
+| **Output validation** | Schema and consistency checks, negative examples, explicit failure states and human review of meaning and scope. |
+| **Project voice and terminology** | Project-owned language rules, domain vocabulary, contextual review and preservation of functional meaning across written content. |
+| **Continuity** | Versioned specifications, decisions, task state and evidence so work can resume without relying on the chat history. |
 
-Los laboratorios incluyen ejemplos ficticios, guías de lectura y pruebas para observar los comportamientos que explican.
+I use tools such as Codex and Claude as part of that process. I review generated changes, check assumptions against the repository and run relevant validation. Contributions to shared methods remain shared contributions; individual examples here have their own scope and attribution.
 
-## Otros ejemplos móviles
+## Spec-driven development
 
-- [Flutter Variants](https://github.com/navalcode/FlutterVariants): ejemplo de configuración por entorno y recursos por flavor.
-- [Android Lottie Tutorial](https://github.com/navalcode/AndroidLottieTutorial): ejemplo de animaciones en una interfaz Android con Kotlin.
+I use specifications as working engineering artifacts. A specification should describe behavior clearly enough to guide implementation and provide a basis for checking whether the result matches the request.
 
-Son materiales de aprendizaje. Los repositorios conservan su contexto y su alcance.
+My workflow connects:
 
-## Cómo leo y explico el código
+1. **Problem and boundaries:** user need, constraints, non-goals and what remains unknown.
+2. **Behavior and acceptance:** states, contracts, failure cases, cancellation, recovery and criteria that can be checked.
+3. **Implementation decisions:** alternatives, tradeoffs, dependency boundaries and the reason for the chosen approach.
+4. **Verification:** tests tied to behavior, reproducible commands, actual results and explicit validation limits.
+5. **Continuity:** updated specifications, decision records and a clear next step for the next session or contributor.
 
-Me interesa que una implementación permita responder qué problema resuelve, qué alternativas había y cómo se comprueba su comportamiento. Por eso los ejemplos ponen el foco en decisiones y escenarios concretos: cancelación, estado, errores e integración.
+For AI-assisted work, this gives the agent an explicit contract and gives the reviewer a concrete basis for evaluating the result. I treat a proposed plan, a passing schema and an executed test as different kinds of evidence, and check each at the level it can support.
+
+## Broader mobile work
+
+My experience also includes Flutter, Android Automotive integration and GNSS investigations involving native interoperability and diagnostics. These areas involve different validation needs: a simulated integration, an emulator run and a physical-device result support different conclusions.
+
+Two historical learning examples are available here:
+
+- [Flutter Variants](https://github.com/navalcode/FlutterVariants): environment-specific entry points, configuration and flavor resources.
+- [Android Lottie Tutorial](https://github.com/navalcode/AndroidLottieTutorial): animation and transition examples in a Kotlin/Views interface.
+
+Their READMEs explain their age and scope. They are separate from the current Android labs and should be read in that context.
+
+## What I want the code to explain
+
+What problem does this solve? Who owns the work and its cancellation? What survives a failure? Which assumptions were tested? What would change if the requirements changed?
+
+Those are the questions I try to answer through the implementation, its tests and the decisions around it.

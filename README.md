@@ -21,12 +21,13 @@ My day-to-day technical interests and experience include:
 
 I use architecture to make behavior easier to reason about and change. A small project can have explicit contracts and useful tests without needing the structure of a large application.
 
-## Selected Android labs
+## Selected Android projects
 
 These repositories use fictional, self-contained examples. Each has a focused question, code to inspect and tests or exercises that make the behavior observable.
 
 | Project | Technical focus | Suggested reading |
 |---|---|---|
+| [Rumbo](https://github.com/navalcode/rumbo-android) | Original Compose app with Room, Retrofit, Navigation, cache/failure recovery and read-only ViewModel state | Inspect the REST boundary and cancellation, then the 32 JVM tests and seven emulator checks. No backend or credentials required. |
 | [Coroutine Lab](https://github.com/navalcode/coroutine-lab) | Structured concurrency, cancellation, `launch`/`async`, exception handling and Flow operators | Follow the timelines, predict execution order and compare the examples with their tests. |
 | [Compose Effect Lab](https://github.com/navalcode/compose-effect-lab) | Effect keys, restarts, resource ownership and `rememberUpdatedState` | Change keys and callbacks, remove content from composition and inspect the recorded lifecycle. |
 | [Coroutines Tests Mini](https://github.com/navalcode/android-coroutines-tests-mini) | Coroutine and StateFlow tests, injectable dispatchers, fakes and virtual time | Start with the state model and ViewModel tests, then inspect cancellation and latest-query behavior. |

@@ -4,6 +4,8 @@
 
 **English** · [Español](https://github.com/navalcode/navalcode/blob/main/README.es.md)
 
+[Portfolio](https://passkeys.navalcode.org/portfolio/) · [Portfolio en español](https://passkeys.navalcode.org/portfolio/es.html)
+
 I develop and maintain mobile applications, with Android as my main focus. My work combines feature development with the less visible engineering that keeps an application usable: lifecycle ownership, asynchronous state, SDK integration, compatibility, failure recovery and testing.
 
 I also work with Flutter and build reusable AI-assisted engineering workflows. I am particularly interested in making requirements, decisions and validation explicit enough that another developer—or another agent session—can continue the work with a reliable understanding of what has been implemented.

@@ -1,0 +1,46 @@
+[
+  {
+    "path": ".gitignore",
+    "sha256": "7a3bd2cba4dc2150aadd46083a44160c4e7d30ea26ade820480119b4b0e60532"
+  },
+  {
+    "path": "README.md",
+    "sha256": "4315595427719d8eb44e1c131972a6ef8086a178e993144e4a4ff66ba4780acb"
+  },
+  {
+    "path": "README.es.md",
+    "sha256": "a159165a5b0eab7943a2ab970015894b314d5b0b2d7618bd023fe3b4cb3ba178"
+  },
+  {
+    "path": "ENGINEERING_GUIDE.md",
+    "sha256": "b2ef6d7f3b1424d375aadaa576e57f17a8db824d581f974c379d93a88567f951"
+  },
+  {
+    "path": "ENGINEERING_GUIDE.es.md",
+    "sha256": "0867b753f2bcf8623cbe204c8c7c11181af48275f6316d196108ed36fc7b6387"
+  },
+  {
+    "path": "MOBILE_ROADMAP.md",
+    "sha256": "3f3cf05e1b284a8282070e809c92c60cd4fdf356d6da7cff271eaa986bd240be"
+  },
+  {
+    "path": "MOBILE_ROADMAP.es.md",
+    "sha256": "373d3e1fe83bc59fbd6e6d4101f81c8d91c122262e14890b715db8c7c7e00ac3"
+  },
+  {
+    "path": "DESIGN.md",
+    "sha256": "31ffeb864a3e8ad6d00cb27599b4fb76a02e4d55e8d976dfe71c6403dc76cb06"
+  },
+  {
+    "path": "THIRD_PARTY.md",
+    "sha256": "b63a2780ab40e3c3f910065f93a8d27ebf67ae974270954012349e802a262f7e"
+  },
+  {
+    "path": "images/rumbo.png",
+    "sha256": "9f42565a03a918dcf2c606366d3201c5b9436c3c971c49411ed6da8cf7c1e4d8"
+  },
+  {
+    "path": "images/bitacora.png",
+    "sha256": "768f293a487dc4c4de2fd80c479df60fb400543d80ae26be8194b7b399e42d05"
+  }
+]

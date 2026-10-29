@@ -10,15 +10,36 @@ Este GitHub reúne mis aplicaciones personales, laboratorios técnicos y herrami
 
 **Empieza por [Rumbo](https://github.com/navalcode/rumbo-android)** para ver una aplicación Android, o por **[Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab)** para conocer mi enfoque de ingeniería asistida por IA.
 
+## Interfaces ejecutadas
+
+<p>
+<a href="https://github.com/navalcode/rumbo-android"><img src="images/rumbo.png" alt="Rumbo: catálogo ficticio de escapadas ejecutado en el emulador Android" width="200"></a>
+<a href="https://github.com/navalcode/bitacora-flutter"><img src="images/bitacora.png" alt="Bitácora: una tarea completada y cinco pendientes ejecutadas en el emulador Android" width="200"></a>
+</p>
+
+Capturas reales del emulador Android, interfaz inglesa y datos ficticios. Los paisajes de Rumbo son ilustraciones Canvas originales. Abre cada proyecto para examinar su implementación, fallos y alcance de validación.
+
 ## Proyectos seleccionados
 
-| Proyecto | Qué revisar | Validación |
-|---|---|---|
-| [Rumbo](https://github.com/navalcode/rumbo-android) | App de escapadas Kotlin/Compose: frontera Retrofit, persistencia Room, Navigation y recuperación ante fallos del origen. | [Build Android, pruebas y emulador](https://github.com/navalcode/rumbo-android/actions/workflows/checks.yml) |
-| [Bitácora](https://github.com/navalcode/bitacora-flutter) | App Flutter de tareas: generaciones de peticiones, escrituras locales confirmadas, flavors Android e interfaz en inglés/español. | [Comprobaciones Flutter y Android](https://github.com/navalcode/bitacora-flutter/actions/workflows/checks.yml) |
-| [Vehicle Session Lab](https://github.com/navalcode/vehicle-session-lab) | Frontera de sesiones Kotlin/JVM: propiedad de callbacks, cancelación, reconexión acotada y antigüedad de telemetría. | [Pruebas Kotlin y demo](https://github.com/navalcode/vehicle-session-lab/actions) |
-| [Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab) | CLI Python y adaptador MCP: trazabilidad de criterios de aceptación con evidencias JUnit y revisión de propuestas estructuradas. | [Comprobaciones de contrato y protocolo](https://github.com/navalcode/spec-evidence-lab/actions) |
-| [GNSS Diagnostics Lab](https://github.com/navalcode/gnss-diagnostics-lab) | Diagnóstico de capturas Python/C: emparejado exacto con referencias, huecos de fix, saltos aparentes y frontera `ctypes` probada. | [Comprobaciones Linux/macOS](https://github.com/navalcode/gnss-diagnostics-lab/actions) |
+**[Rumbo](https://github.com/navalcode/rumbo-android) · Android nativo**
+
+App de escapadas Kotlin/Compose: frontera Retrofit, persistencia Room, Navigation y recuperación ante fallos del origen. [Build, pruebas y emulador](https://github.com/navalcode/rumbo-android/actions/workflows/checks.yml).
+
+**[Bitácora](https://github.com/navalcode/bitacora-flutter) · Flutter**
+
+App de tareas con generaciones de peticiones, escrituras locales confirmadas, flavors Android e interfaz en inglés/español. [Comprobaciones Flutter y Android](https://github.com/navalcode/bitacora-flutter/actions/workflows/checks.yml).
+
+**[Vehicle Session Lab](https://github.com/navalcode/vehicle-session-lab) · Kotlin/JVM**
+
+Frontera de sesiones: propiedad de callbacks, cancelación, reconexión acotada y antigüedad de telemetría. [Pruebas y demo ejecutable](https://github.com/navalcode/vehicle-session-lab/actions).
+
+**[Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab) · Python/CLI/MCP**
+
+Trazabilidad de criterios de aceptación con evidencias JUnit y revisión de propuestas estructuradas. La salida de texto inglés/español conserva estados y hashes de máquina. [Comprobaciones de contrato y protocolo](https://github.com/navalcode/spec-evidence-lab/actions).
+
+**[GNSS Diagnostics Lab](https://github.com/navalcode/gnss-diagnostics-lab) · Python/C**
+
+Diagnóstico de capturas: emparejado exacto con referencias, huecos de fix, saltos aparentes y frontera `ctypes` probada. [Comprobaciones Linux/macOS](https://github.com/navalcode/gnss-diagnostics-lab/actions).
 
 Rumbo y Bitácora usan datos ficticios y se ejecutan sin cuentas ni servicios privados. Vehicle Session Lab utiliza un proveedor simulado; GNSS Diagnostics Lab trabaja con capturas sintéticas. Sus README explican qué se ha ejercitado y qué necesitaría validación en hardware o producción.
 
@@ -28,11 +49,13 @@ Mi trabajo Android utiliza Kotlin, Coroutines, Flow y Compose. Presto especial a
 
 Tres repositorios más pequeños permiten examinar esos comportamientos por separado:
 
-- [Coroutine Lab](https://github.com/navalcode/coroutine-lab): concurrencia estructurada, `launch`/`async`, propagación de excepciones y operadores Flow, con líneas temporales interactivas.
-- [Compose Effect Lab](https://github.com/navalcode/compose-effect-lab): claves de efectos, reinicios, liberación de recursos y `rememberUpdatedState`; los ejemplos incluyen pruebas JVM y recorridos Compose.
-- [Coroutines Tests Mini](https://github.com/navalcode/android-coroutines-tests-mini): StateFlow, dispatchers sustituibles, fakes, tiempo virtual y sustitución de una consulta en curso.
+- [Coroutine Lab](https://github.com/navalcode/coroutine-lab): concurrencia estructurada, `launch`/`async`, propagación de excepciones y operadores Flow. Las trazas distinguen cancelación de fallo de negocio; Cancelar sigue accesible al leer la guía.
+- [Compose Effect Lab](https://github.com/navalcode/compose-effect-lab): claves de efectos, reinicios, liberación de recursos y `rememberUpdatedState`. El scroll conserva al propietario del experimento; cambiar la clave o salir de su pantalla sigue cancelando/liberando. Los ejemplos incluyen pruebas JVM y recorridos nativos.
+- [Coroutines Tests Mini](https://github.com/navalcode/android-coroutines-tests-mini): StateFlow, dispatchers sustituibles, fakes, tiempo virtual y sustitución de una consulta en curso. La pequeña pantalla Views protege frente a cargas duplicadas y conserva resultados al recrearse.
 
 En Rumbo, estas cuestiones se reúnen en una aplicación completa. La orquestación de dominio está separada de Android; los contratos de repositorio y adaptadores permiten sustituir transporte y almacenamiento. Los DTO de Retrofit se validan en la frontera, Room gestiona la persistencia y el ViewModel expone flows de solo lectura. La app utiliza un grafo de dependencias explícito y pequeño. Sus notas de arquitectura explican esa elección y los límites entre recrear la actividad y restaurar el proceso.
+
+Los tres labs tienen controles bilingües y capturas reales de emulador. Sus README separan pruebas JVM/CI de recorridos Android ejecutados localmente y explican los límites de idioma.
 
 ## Ampliación entre plataformas móviles
 

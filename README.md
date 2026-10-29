@@ -10,15 +10,36 @@ This GitHub brings together my personal applications, focused technical labs and
 
 **Start with [Rumbo](https://github.com/navalcode/rumbo-android)** for an Android application, or **[Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab)** for my approach to AI-assisted engineering.
 
+## Working interfaces
+
+<p>
+<a href="https://github.com/navalcode/rumbo-android"><img src="images/rumbo.png" alt="Rumbo: a fictional trip catalogue rendered in the Android emulator" width="200"></a>
+<a href="https://github.com/navalcode/bitacora-flutter"><img src="images/bitacora.png" alt="Bitácora: one completed and five pending field tasks rendered in the Android emulator" width="200"></a>
+</p>
+
+Actual Android emulator captures, English UI and fictional data. Rumbo's landscapes are original Canvas illustrations. Open either project to inspect its implementation, failure paths and validation scope.
+
 ## Selected work
 
-| Project | What to look at | Validation |
-|---|---|---|
-| [Rumbo](https://github.com/navalcode/rumbo-android) | Kotlin/Compose trip app: Retrofit boundary, Room persistence, Navigation and recovery from source failures. | [Android build, tests and emulator](https://github.com/navalcode/rumbo-android/actions/workflows/checks.yml) |
-| [Bitácora](https://github.com/navalcode/bitacora-flutter) | Flutter task app: request generations, acknowledged local writes, Android flavors and English/Spanish UI. | [Flutter and Android checks](https://github.com/navalcode/bitacora-flutter/actions/workflows/checks.yml) |
-| [Vehicle Session Lab](https://github.com/navalcode/vehicle-session-lab) | Kotlin/JVM session boundary: callback ownership, cancellation, bounded reconnection and telemetry freshness. | [Kotlin tests and demo](https://github.com/navalcode/vehicle-session-lab/actions) |
-| [Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab) | Python CLI and MCP adapter: trace acceptance criteria to JUnit evidence and check structured implementation proposals. | [Contract and protocol checks](https://github.com/navalcode/spec-evidence-lab/actions) |
-| [GNSS Diagnostics Lab](https://github.com/navalcode/gnss-diagnostics-lab) | Python/C capture diagnostics: exact reference pairing, fix gaps, apparent jumps and a tested `ctypes` boundary. | [Linux/macOS checks](https://github.com/navalcode/gnss-diagnostics-lab/actions) |
+**[Rumbo](https://github.com/navalcode/rumbo-android) · Native Android**
+
+Kotlin/Compose trip app: Retrofit boundary, Room persistence, Navigation and recovery from source failures. [Build, tests and emulator](https://github.com/navalcode/rumbo-android/actions/workflows/checks.yml).
+
+**[Bitácora](https://github.com/navalcode/bitacora-flutter) · Flutter**
+
+Task app with request generations, acknowledged local writes, Android flavors and English/Spanish UI. [Flutter and Android checks](https://github.com/navalcode/bitacora-flutter/actions/workflows/checks.yml).
+
+**[Vehicle Session Lab](https://github.com/navalcode/vehicle-session-lab) · Kotlin/JVM**
+
+Session boundary: callback ownership, cancellation, bounded reconnection and telemetry freshness. [Tests and executable demo](https://github.com/navalcode/vehicle-session-lab/actions).
+
+**[Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab) · Python/CLI/MCP**
+
+Trace acceptance criteria to JUnit evidence and check structured implementation proposals. English/Spanish text output preserves machine statuses and hashes. [Contract and protocol checks](https://github.com/navalcode/spec-evidence-lab/actions).
+
+**[GNSS Diagnostics Lab](https://github.com/navalcode/gnss-diagnostics-lab) · Python/C**
+
+Capture diagnostics: exact reference pairing, fix gaps, apparent jumps and a tested `ctypes` boundary. [Linux/macOS checks](https://github.com/navalcode/gnss-diagnostics-lab/actions).
 
 Rumbo and Bitácora use fictional data and run without accounts or private services. Vehicle Session Lab uses a simulated gateway; GNSS Diagnostics Lab uses synthetic captures. Their READMEs describe what has been exercised and where hardware or production validation would be needed.
 
@@ -28,11 +49,13 @@ My Android work uses Kotlin, Coroutines, Flow and Compose. I pay particular atte
 
 Three smaller repositories let you inspect those behaviors independently:
 
-- [Coroutine Lab](https://github.com/navalcode/coroutine-lab): structured concurrency, `launch`/`async`, exception propagation and Flow operators, with interactive timelines.
-- [Compose Effect Lab](https://github.com/navalcode/compose-effect-lab): effect keys, restarts, resource cleanup and `rememberUpdatedState`; JVM tests and Compose journeys accompany the examples.
-- [Coroutines Tests Mini](https://github.com/navalcode/android-coroutines-tests-mini): StateFlow, injectable dispatchers, fakes, virtual time and replacement of an in-flight query.
+- [Coroutine Lab](https://github.com/navalcode/coroutine-lab): structured concurrency, `launch`/`async`, exception propagation and Flow operators. Interactive traces distinguish cancellation from business failures; Cancel remains reachable while reading the guide.
+- [Compose Effect Lab](https://github.com/navalcode/compose-effect-lab): effect keys, restarts, resource cleanup and `rememberUpdatedState`. Scrolling preserves the experiment owner; changing a key or leaving its screen still cancels/releases it. JVM tests and native journeys accompany the examples.
+- [Coroutines Tests Mini](https://github.com/navalcode/android-coroutines-tests-mini): StateFlow, injectable dispatchers, fakes, virtual time and replacement of an in-flight query. The small Views screen guards duplicate loads and preserves results on recreation.
 
 In Rumbo, those concerns meet in a complete application. Domain orchestration is separated from Android; repository and adapter contracts keep transport and storage replaceable. Retrofit DTOs are validated at the boundary, Room owns persisted state, and the ViewModel exposes read-only flows. The app uses a small explicit dependency graph. Its architecture notes explain that choice and the limits of activity recreation versus process restoration.
+
+The three labs have bilingual controls and real emulator captures. Their READMEs separate JVM/CI checks from locally executed Android journeys and document the supported-language boundaries.
 
 ## Growing across mobile platforms
 

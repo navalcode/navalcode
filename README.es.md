@@ -60,6 +60,8 @@ Mi proceso conecta:
 
 En el trabajo asistido por IA, este enfoque da al agente un contrato explícito y a quien revisa una base concreta para valorar el resultado. Una propuesta, un esquema válido y una prueba ejecutada son evidencias diferentes; compruebo cada una según lo que puede demostrar.
 
+Un ejemplo ejecutable es [Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab): CLI original en Python con adaptador MCP stdio opcional, trazabilidad entre aceptación y resultados JUnit y comprobación de propuestas estructuradas respecto a la especificación vigente. Incluye 34 pruebas del validador, cinco del catálogo ejecutado y cuatro casos de protocolo, con CI en Python 3.11 y 3.14. Los resultados conservan explícitamente sus límites de revisión humana.
+
 ## Otras áreas móviles
 
 Mi experiencia también incluye Flutter, integración en Android Automotive e investigación GNSS con interoperabilidad nativa y diagnóstico. Cada área requiere su propia validación: una simulación, una ejecución en emulador y un resultado en dispositivo físico permiten conclusiones distintas.

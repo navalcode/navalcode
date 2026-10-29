@@ -60,6 +60,8 @@ My workflow connects:
 
 For AI-assisted work, this gives the agent an explicit contract and gives the reviewer a concrete basis for evaluating the result. I treat a proposed plan, a passing schema and an executed test as different kinds of evidence, and check each at the level it can support.
 
+A working example is [Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab): an original Python CLI and optional MCP stdio adapter that trace acceptance criteria to JUnit results and check structured proposals against the current specification. It includes 34 validator tests, five executed catalog tests and four protocol cases, with CI on Python 3.11 and 3.14. Reports keep their human-review limits explicit.
+
 ## Broader mobile work
 
 My experience also includes Flutter, Android Automotive integration and GNSS investigations involving native interoperability and diagnostics. These areas involve different validation needs: a simulated integration, an emulator run and a physical-device result support different conclusions.

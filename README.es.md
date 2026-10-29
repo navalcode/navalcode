@@ -1,94 +1,67 @@
 # Manuel Naval
 
-**Ingeniería Android y móvil · Kotlin · Jetpack Compose · Desarrollo asistido por IA**
+**Ingeniero Android · Kotlin · Jetpack Compose**
 
-[English](https://github.com/navalcode/navalcode) · **Español**
+[English](https://github.com/navalcode/navalcode/blob/main/README.md) · [Notas de ingeniería](https://github.com/navalcode/navalcode/blob/main/ENGINEERING_GUIDE.es.md)
 
-[Portfolio en español](https://passkeys.navalcode.org/portfolio/es.html) · [Portfolio in English](https://passkeys.navalcode.org/portfolio/)
+Desarrollo y mantengo aplicaciones móviles, con Android como especialidad principal. Trabajo en arquitectura, estado asíncrono, integración de SDK y el comportamiento que importa cuando una app se interrumpe, falla una petición o los datos deben sobrevivir a un reinicio.
 
-Desarrollo y mantengo aplicaciones móviles, con Android como especialidad principal. Combino el desarrollo de funcionalidades con el trabajo que sostiene su comportamiento: ciclo de vida, estado asíncrono, integración de SDK, compatibilidad, recuperación ante fallos y pruebas.
+Este GitHub reúne mis aplicaciones personales, laboratorios técnicos y herramientas de ingeniería. Los repositorios permiten leer y ejecutar la implementación, sus decisiones y sus pruebas.
 
-También trabajo con Flutter y preparo métodos reutilizables de ingeniería asistida por IA. Me interesa que los requisitos, las decisiones y la validación queden suficientemente claros para que otra persona —o una nueva sesión de un agente— pueda continuar con una comprensión fiable de lo implementado.
+**Empieza por [Rumbo](https://github.com/navalcode/rumbo-android)** para ver una aplicación Android, o por **[Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab)** para conocer mi enfoque de ingeniería asistida por IA.
 
-## Ingeniería Android
+## Proyectos seleccionados
 
-Mi experiencia e intereses técnicos incluyen:
-
-- **Kotlin, Coroutines y Flow:** concurrencia estructurada, cancelación, responsabilidad sobre dispatchers, trabajo concurrente, propagación de errores y estado observable de interfaz.
-- **Jetpack Compose:** propiedad del estado, recomposición, claves de efectos, `LaunchedEffect`, `DisposableEffect`, liberación de recursos y callbacks actualizados sin reinicios innecesarios.
-- **Arquitectura y límites:** presentación con ViewModel, contratos de repositorio y adaptadores, separación de la lógica respecto a Android, dependencias explícitas y módulos con responsabilidades útiles.
-- **Persistencia y recuperación:** datos locales con Room, consulta de caché cuando falla la fuente, operaciones locales repetibles y distinción entre carga, vacío, datos guardados y error.
-- **Integración y mantenimiento:** SDK de terceros, trabajo en segundo plano, cambios de conectividad, compatibilidad, configuración de releases y diagnóstico de diferencias entre debug y builds optimizadas.
-- **Pruebas:** fakes, tiempo virtual, cancelación de coroutines, transiciones de estado, persistencia y recorridos de interfaz que comprueban recuperación y éxito.
-
-Utilizo la arquitectura para facilitar la comprensión y evolución del comportamiento. Un proyecto pequeño puede tener contratos claros y pruebas útiles sin adoptar la estructura de una aplicación grande.
-
-## Proyectos Android seleccionados
-
-Estos repositorios utilizan ejemplos ficticios y autocontenidos. Cada uno plantea una pregunta concreta y ofrece código, pruebas o ejercicios para observar el comportamiento.
-
-| Proyecto | Contenido técnico | Recorrido sugerido |
+| Proyecto | Qué revisar | Validación |
 |---|---|---|
-| [Rumbo](https://github.com/navalcode/rumbo-android) | App Compose original con Room, Retrofit, Navigation, caché/recuperación y estado de ViewModel de solo lectura | Revisar el límite REST y la cancelación, y después las 32 pruebas JVM y siete de emulador. Sin backend ni credenciales. |
-| [Coroutine Lab](https://github.com/navalcode/coroutine-lab) | Concurrencia estructurada, cancelación, `launch`/`async`, excepciones y operadores Flow | Seguir las líneas temporales, predecir el orden y contrastar los ejemplos con sus pruebas. |
-| [Compose Effect Lab](https://github.com/navalcode/compose-effect-lab) | Claves, reinicios, responsabilidad sobre recursos y `rememberUpdatedState` | Cambiar claves y callbacks, retirar contenido de composición y revisar el ciclo de vida registrado. |
-| [Coroutines Tests Mini](https://github.com/navalcode/android-coroutines-tests-mini) | Pruebas de coroutines y StateFlow, dispatchers inyectables, fakes y tiempo virtual | Empezar por el estado y las pruebas del ViewModel; después revisar cancelación y búsqueda más reciente. |
+| [Rumbo](https://github.com/navalcode/rumbo-android) | App de escapadas Kotlin/Compose: frontera Retrofit, persistencia Room, Navigation y recuperación ante fallos del origen. | [Build Android, pruebas y emulador](https://github.com/navalcode/rumbo-android/actions/workflows/checks.yml) |
+| [Bitácora](https://github.com/navalcode/bitacora-flutter) | App Flutter de tareas: generaciones de peticiones, escrituras locales confirmadas, flavors Android e interfaz en inglés/español. | [Comprobaciones Flutter y Android](https://github.com/navalcode/bitacora-flutter/actions/workflows/checks.yml) |
+| [Vehicle Session Lab](https://github.com/navalcode/vehicle-session-lab) | Frontera de sesiones Kotlin/JVM: propiedad de callbacks, cancelación, reconexión acotada y antigüedad de telemetría. | [Pruebas Kotlin y demo](https://github.com/navalcode/vehicle-session-lab/actions) |
+| [Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab) | CLI Python y adaptador MCP: trazabilidad de criterios de aceptación con evidencias JUnit y revisión de propuestas estructuradas. | [Comprobaciones de contrato y protocolo](https://github.com/navalcode/spec-evidence-lab/actions) |
+| [GNSS Diagnostics Lab](https://github.com/navalcode/gnss-diagnostics-lab) | Diagnóstico de capturas Python/C: emparejado exacto con referencias, huecos de fix, saltos aparentes y frontera `ctypes` probada. | [Comprobaciones Linux/macOS](https://github.com/navalcode/gnss-diagnostics-lab/actions) |
 
-## Ingeniería asistida por IA
+Rumbo y Bitácora usan datos ficticios y se ejecutan sin cuentas ni servicios privados. Vehicle Session Lab utiliza un proveedor simulado; GNSS Diagnostics Lab trabaja con capturas sintéticas. Sus README explican qué se ha ejercitado y qué necesitaría validación en hardware o producción.
 
-Mi trabajo con IA incluye crear y adaptar métodos reutilizables de ingeniería. He contribuido a herramientas compartidas y flujos adaptados a proyectos en estas áreas:
+## Android y concurrencia
 
-| Área | Qué trabajo |
-|---|---|
-| **Contexto del proyecto** | Arquitectura, convenciones, configuración, precedencia e instrucciones de entrada concisas que cargan el detalle pertinente. |
-| **Skills y herramientas** | Instrucciones reutilizables, distribución de contexto mediante MCP, entradas y salidas estructuradas e integración con herramientas existentes. |
-| **Implementación y revisión** | Definir la tarea, leer el código real, comparar alternativas, producir cambios revisables y comprobar el resultado. |
-| **Validación de salidas** | Esquemas, consistencia, ejemplos negativos, estados de fallo y revisión humana del significado y del alcance. |
-| **Voz y terminología** | Reglas de lenguaje propias del proyecto, vocabulario del dominio, revisión contextual y conservación del significado funcional. |
-| **Continuidad** | Especificaciones, decisiones, estado de tareas y evidencias versionadas para retomar el trabajo sin depender del historial del chat. |
+Mi trabajo Android utiliza Kotlin, Coroutines, Flow y Compose. Presto especial atención a quién pertenece una coroutine, cuándo debe cancelarse el trabajo, cómo se expone el estado de presentación y qué ve el usuario durante la carga, con contenido anterior y durante la recuperación.
 
-Utilizo herramientas como Codex y Claude dentro de ese proceso. Reviso los cambios generados, contrasto sus supuestos con el repositorio y ejecuto las comprobaciones pertinentes. Las contribuciones a métodos compartidos conservan su carácter comunitario; los ejemplos de este perfil tienen su propio alcance y atribución.
+Tres repositorios más pequeños permiten examinar esos comportamientos por separado:
 
-## Desarrollo guiado por especificaciones
+- [Coroutine Lab](https://github.com/navalcode/coroutine-lab): concurrencia estructurada, `launch`/`async`, propagación de excepciones y operadores Flow, con líneas temporales interactivas.
+- [Compose Effect Lab](https://github.com/navalcode/compose-effect-lab): claves de efectos, reinicios, liberación de recursos y `rememberUpdatedState`; los ejemplos incluyen pruebas JVM y recorridos Compose.
+- [Coroutines Tests Mini](https://github.com/navalcode/android-coroutines-tests-mini): StateFlow, dispatchers sustituibles, fakes, tiempo virtual y sustitución de una consulta en curso.
 
-Utilizo las especificaciones como documentos de trabajo de ingeniería. Deben describir el comportamiento con precisión suficiente para orientar la implementación y comprobar si el resultado corresponde a lo solicitado.
+En Rumbo, estas cuestiones se reúnen en una aplicación completa. La orquestación de dominio está separada de Android; los contratos de repositorio y adaptadores permiten sustituir transporte y almacenamiento. Los DTO de Retrofit se validan en la frontera, Room gestiona la persistencia y el ViewModel expone flows de solo lectura. La app utiliza un grafo de dependencias explícito y pequeño. Sus notas de arquitectura explican esa elección y los límites entre recrear la actividad y restaurar el proceso.
 
-Mi proceso conecta:
+## Cómo enfoco la ingeniería
 
-1. **Problema y límites:** necesidad del usuario, restricciones, exclusiones y dudas pendientes.
-2. **Comportamiento y aceptación:** estados, contratos, fallos, cancelación, recuperación y criterios comprobables.
-3. **Decisiones de implementación:** alternativas, compromisos, límites entre dependencias y motivo de la elección.
-4. **Verificación:** pruebas vinculadas al comportamiento, comandos reproducibles, resultados reales y límites de validación.
-5. **Continuidad:** especificaciones actualizadas, decisiones registradas y un siguiente paso claro para otra sesión o persona.
+Utilizo la arquitectura para facilitar los cambios y las pruebas del comportamiento. Doy más valor a unas fronteras útiles que a añadir capas sin una necesidad concreta.
 
-En el trabajo asistido por IA, este enfoque da al agente un contrato explícito y a quien revisa una base concreta para valorar el resultado. Una propuesta, un esquema válido y una prueba ejecutada son evidencias diferentes; compruebo cada una según lo que puede demostrar.
+- **Estado y ciclo de vida:** propiedad, cancelación y limpieza explícitas; estado inmutable hacia la UI; tratamiento deliberado de resultados tardíos.
+- **Integración:** contratos de adaptadores, comportamiento de SDK de terceros, trabajo en segundo plano, cambios de conectividad y compatibilidad de plataforma.
+- **Persistencia:** confirmación de escrituras, operaciones repetibles y recuperación que conserva información útil después de un fallo.
+- **Pruebas:** fakes y tiempo virtual para transiciones de estado; comprobaciones de integración e interfaz para comportamientos que necesitan la plataforma.
+- **Mantenimiento:** herramientas fijadas, comandos reproducibles, cambios revisables y comprobación de builds optimizadas además del comportamiento debug.
 
-Un ejemplo ejecutable es [Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab): CLI original en Python con adaptador MCP stdio opcional, trazabilidad entre aceptación y resultados JUnit y comprobación de propuestas estructuradas respecto a la especificación vigente. Incluye 40 pruebas del validador/configuración, cinco del catálogo ejecutado y cuatro casos de protocolo, con CI en Python 3.11 y 3.14. Los resultados conservan explícitamente sus límites de revisión humana.
+La [guía de revisión y release](https://github.com/navalcode/navalcode/blob/main/ENGINEERING_GUIDE.es.md) explica cómo reviso estos ejemplos y distingo las comprobaciones de código, los resultados en emulador y la preparación de una release.
 
-## Otras áreas móviles
+## Ingeniería asistida por IA y desarrollo guiado por especificaciones
 
-Mi experiencia también incluye Flutter, integración en Android Automotive e investigación GNSS con interoperabilidad nativa y diagnóstico. Cada área requiere su propia validación: una simulación, una ejecución en emulador y un resultado en dispositivo físico permiten conclusiones distintas.
+Utilizo Codex y Claude junto con la inspección de código, la implementación y la revisión. Mi trabajo incluye contribuciones a métodos compartidos y flujos específicos de proyecto: contexto de arquitectura, instrucciones reutilizables, herramientas MCP, salidas estructuradas, terminología y continuidad entre sesiones. Las contribuciones compartidas conservan su atribución; los ejemplos públicos de esta cuenta tienen implementación y alcance propios.
 
-Un ejemplo Flutter original actual es [Bitácora](https://github.com/navalcode/bitacora-flutter): generaciones de peticiones, guardado local confirmado, recursos ES/EN y flavors Android. Sus 22 tests de controlador/widgets, recorrido de preferencias nativas, flavors/release Android y build web pasan en la CI enlazada; la prueba nativa local también cubre el reinicio del proceso.
+Trabajo con especificaciones que conectan un problema con un comportamiento observable:
 
-Dos laboratorios originales permiten inspeccionar integración y diagnóstico:
+1. Definir la necesidad del usuario, las restricciones, los supuestos y el alcance.
+2. Describir estados, contratos, cancelación, fallos y criterios de aceptación.
+3. Registrar las decisiones de implementación y las alternativas consideradas.
+4. Validar el resultado con pruebas de comportamiento y comandos reproducibles.
+5. Actualizar la especificación, las decisiones y las evidencias de la tarea para que otra persona o sesión del agente pueda continuar.
 
-- [Vehicle Session Lab](https://github.com/navalcode/vehicle-session-lab): propiedad de callbacks en Kotlin/JVM, reconexión acotada, cancelación, eventos tardíos y antigüedad por métrica. Sus 20 tests y demo pasan localmente y en CI. El proveedor es ficticio; no implementa Android Car ni valida hardware de vehículo.
-- [GNSS Diagnostics Lab](https://github.com/navalcode/gnss-diagnostics-lab): validación CSV acotada, emparejado exacto con referencia, pérdida de fix, huecos, saltos y frontera Python/C mediante `ctypes`. Sus 25 tests y build nativo pasan en CI Linux/macOS. Las capturas son sintéticas y el modelo es esférico; esos diagnósticos no acreditan precisión física del receptor.
+Para el agente, esto proporciona un contrato concreto de implementación. Para quien revisa, ofrece una forma de contrastar el cambio con el comportamiento esperado. Inspecciono el código generado, compruebo los supuestos contra el repositorio y distingo los resultados de validación de los planes propuestos.
 
-Hay dos ejemplos históricos de aprendizaje disponibles:
+[Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab) hace ejecutable una parte de este flujo. Comprueba evidencias de aceptación, resultados JUnit y propuestas estructuradas frente a una especificación; permite resúmenes en inglés/español y ofrece un adaptador opcional MCP stdio de solo lectura. Las comprobaciones de esquema y coherencia apoyan la revisión humana del significado y la suficiencia.
 
-- [Flutter Variants](https://github.com/navalcode/FlutterVariants): puntos de entrada por entorno, configuración y recursos por flavor.
-- [Android Lottie Tutorial](https://github.com/navalcode/AndroidLottieTutorial): animaciones y transiciones en una interfaz Kotlin/Views.
+## Trabajo anterior
 
-Sus README explican su antigüedad y alcance. Se conservan como aprendizaje histórico, separado de los laboratorios Android actuales.
-
-## Qué quiero que explique el código
-
-¿Qué problema resuelve? ¿Quién es responsable del trabajo y de su cancelación? ¿Qué información se conserva ante un fallo? ¿Qué supuestos se han probado? ¿Qué cambiaría si cambiasen los requisitos?
-
-Son las preguntas que intento responder mediante la implementación, sus pruebas y las decisiones que la acompañan.
-
-## Revisar los ejemplos
-
-[Guía de revisión y release](https://github.com/navalcode/navalcode/blob/main/ENGINEERING_GUIDE.es.md) · [English guide](https://github.com/navalcode/navalcode/blob/main/ENGINEERING_GUIDE.md)
+La cuenta también conserva ejercicios formativos y experimentos anteriores de Android, Flutter, Java y desarrollo web. Sus README explican el alcance y mantienen la autoría y las notas originales. [Flutter Variants](https://github.com/navalcode/FlutterVariants) explora configuración por entornos; [Android Lottie Tutorial](https://github.com/navalcode/AndroidLottieTutorial) explora animaciones en Kotlin/Views.

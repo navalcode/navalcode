@@ -1,10 +1,10 @@
 # Manuel Naval
 
-**Android engineer · Kotlin · Jetpack Compose**
+**Mobile engineer · Android · Flutter**
 
 [Español](https://github.com/navalcode/navalcode/blob/main/README.es.md) · [Engineering notes](https://github.com/navalcode/navalcode/blob/main/ENGINEERING_GUIDE.md)
 
-I develop and maintain mobile applications, with Android as my main focus. I work on architecture, asynchronous state, SDK integration and the behavior that matters when an app is interrupted, a request fails or stored data has to survive a restart.
+I develop and maintain mobile applications, with a strong Android background and Flutter experience. I work on architecture, asynchronous state, SDK integration and the behavior that matters when an app is interrupted, a request fails or stored data has to survive a restart.
 
 This GitHub brings together my personal applications, focused technical labs and engineering tools. The repositories make the implementation, decisions and tests available to read and run.
 
@@ -33,6 +33,10 @@ Three smaller repositories let you inspect those behaviors independently:
 - [Coroutines Tests Mini](https://github.com/navalcode/android-coroutines-tests-mini): StateFlow, injectable dispatchers, fakes, virtual time and replacement of an in-flight query.
 
 In Rumbo, those concerns meet in a complete application. Domain orchestration is separated from Android; repository and adapter contracts keep transport and storage replaceable. Retrofit DTOs are validated at the boundary, Room owns persisted state, and the ViewModel exposes read-only flows. The app uses a small explicit dependency graph. Its architecture notes explain that choice and the limits of activity recreation versus process restoration.
+
+## Growing across mobile platforms
+
+The current runnable examples cover Android/Kotlin and Flutter/Dart. Native iOS is the next extension: a Swift core for state and concurrency, followed by a SwiftUI flow with persistence and platform checks. The [mobile roadmap](https://github.com/navalcode/navalcode/blob/main/MOBILE_ROADMAP.md) tracks the planned increments and their validation gates.
 
 ## How I approach engineering
 

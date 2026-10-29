@@ -1,10 +1,10 @@
 # Manuel Naval
 
-**Ingeniero Android · Kotlin · Jetpack Compose**
+**Ingeniero móvil · Android · Flutter**
 
 [English](https://github.com/navalcode/navalcode/blob/main/README.md) · [Notas de ingeniería](https://github.com/navalcode/navalcode/blob/main/ENGINEERING_GUIDE.es.md)
 
-Desarrollo y mantengo aplicaciones móviles, con Android como especialidad principal. Trabajo en arquitectura, estado asíncrono, integración de SDK y el comportamiento que importa cuando una app se interrumpe, falla una petición o los datos deben sobrevivir a un reinicio.
+Desarrollo y mantengo aplicaciones móviles, con una base sólida en Android y experiencia en Flutter. Trabajo en arquitectura, estado asíncrono, integración de SDK y el comportamiento que importa cuando una app se interrumpe, falla una petición o los datos deben sobrevivir a un reinicio.
 
 Este GitHub reúne mis aplicaciones personales, laboratorios técnicos y herramientas de ingeniería. Los repositorios permiten leer y ejecutar la implementación, sus decisiones y sus pruebas.
 
@@ -33,6 +33,10 @@ Tres repositorios más pequeños permiten examinar esos comportamientos por sepa
 - [Coroutines Tests Mini](https://github.com/navalcode/android-coroutines-tests-mini): StateFlow, dispatchers sustituibles, fakes, tiempo virtual y sustitución de una consulta en curso.
 
 En Rumbo, estas cuestiones se reúnen en una aplicación completa. La orquestación de dominio está separada de Android; los contratos de repositorio y adaptadores permiten sustituir transporte y almacenamiento. Los DTO de Retrofit se validan en la frontera, Room gestiona la persistencia y el ViewModel expone flows de solo lectura. La app utiliza un grafo de dependencias explícito y pequeño. Sus notas de arquitectura explican esa elección y los límites entre recrear la actividad y restaurar el proceso.
+
+## Ampliación entre plataformas móviles
+
+Los ejemplos ejecutables actuales cubren Android/Kotlin y Flutter/Dart. iOS nativo es la siguiente ampliación: un núcleo Swift de estado y concurrencia, seguido de un flujo SwiftUI con persistencia y comprobaciones de plataforma. La [hoja de ruta móvil](https://github.com/navalcode/navalcode/blob/main/MOBILE_ROADMAP.es.md) registra los incrementos previstos y sus criterios de validación.
 
 ## Cómo enfoco la ingeniería
 

@@ -67,7 +67,12 @@ Un ejemplo ejecutable es [Spec Evidence Lab](https://github.com/navalcode/spec-e
 
 Mi experiencia también incluye Flutter, integración en Android Automotive e investigación GNSS con interoperabilidad nativa y diagnóstico. Cada área requiere su propia validación: una simulación, una ejecución en emulador y un resultado en dispositivo físico permiten conclusiones distintas.
 
-Un ejemplo Flutter original actual es [Bitácora](https://github.com/navalcode/bitacora-flutter): generaciones de peticiones, guardado local confirmado, recursos ES/EN y flavors Android. Sus 22 tests de controlador/widgets y el recorrido de preferencias nativas pasan localmente; el repositorio detalla el alcance de builds y CI.
+Un ejemplo Flutter original actual es [Bitácora](https://github.com/navalcode/bitacora-flutter): generaciones de peticiones, guardado local confirmado, recursos ES/EN y flavors Android. Sus 22 tests de controlador/widgets, recorrido de preferencias nativas, flavors/release Android y build web pasan en la CI enlazada; la prueba nativa local también cubre el reinicio del proceso.
+
+Dos laboratorios originales permiten inspeccionar integración y diagnóstico:
+
+- [Vehicle Session Lab](https://github.com/navalcode/vehicle-session-lab): propiedad de callbacks en Kotlin/JVM, reconexión acotada, cancelación, eventos tardíos y antigüedad por métrica. Sus 20 tests y demo pasan localmente y en CI. El proveedor es ficticio; no implementa Android Car ni valida hardware de vehículo.
+- [GNSS Diagnostics Lab](https://github.com/navalcode/gnss-diagnostics-lab): validación CSV acotada, emparejado exacto con referencia, pérdida de fix, huecos, saltos y frontera Python/C mediante `ctypes`. Sus 25 tests y build nativo pasan en CI Linux/macOS. Las capturas son sintéticas y el modelo es esférico; esos diagnósticos no acreditan precisión física del receptor.
 
 Hay dos ejemplos históricos de aprendizaje disponibles:
 

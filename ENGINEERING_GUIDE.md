@@ -8,6 +8,8 @@ Start with [Rumbo](https://github.com/navalcode/rumbo-android). Follow a user ac
 
 Check the failure path as well as success: who owns cancellation, what happens when a newer request wins, which data remains visible and which operation is idempotent? Compare a ViewModel test, an HTTP test and a Room/UI journey. They establish different things. Repeat the documented commands when changing those boundaries.
 
+MVVM, MVI and Clean Architecture answer different design questions. For MVVM, inspect which presentation state belongs to the ViewModel; for MVI, make inputs and state transitions explicit; for Clean Architecture, inspect dependency direction and contracts. Rumbo uses a ViewModel and unidirectional state across app/core with explicit manual dependencies. It does not claim three parallel architectures or require an extra framework to demonstrate those boundaries.
+
 The lab READMEs provide tested toolchains and commands. Versions are pinned for reproducibility; this is not a claim that every dependency is the newest. Record lint findings and evaluate an upgrade against its actual compatibility and behavior before accepting it. Historical learning repositories are contextualized separately and have not been rebuilt as part of their presentation update.
 
 ## Prepare a release deliberately

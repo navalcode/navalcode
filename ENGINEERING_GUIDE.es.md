@@ -8,6 +8,8 @@ Empieza por [Rumbo](https://github.com/navalcode/rumbo-android). Sigue una acci�
 
 Comprueba fallos además del éxito: quién es dueño de la cancelación, qué ocurre cuando gana una petición nueva, qué datos siguen visibles y qué operación es idempotente. Contrasta un test de ViewModel, uno HTTP y un recorrido Room/UI: prueban cosas diferentes. Repite los comandos documentados al cambiar esas fronteras.
 
+MVVM, MVI y Clean Architecture responden preguntas distintas. En MVVM, revisa qué estado de presentación pertenece al ViewModel; en MVI, explicita entradas y transiciones; en Clean Architecture, revisa dirección de dependencias y contratos. Rumbo utiliza ViewModel y estado unidireccional entre app/core con dependencias manuales explícitas. No se atribuyen tres arquitecturas paralelas ni se exige otro framework para demostrar esas fronteras.
+
 Los README conservan toolchains y comandos comprobados. Las versiones están fijadas para reproducibilidad; no se afirma que cada dependencia sea la más nueva. Registra los hallazgos de lint y evalúa compatibilidad/comportamiento antes de aceptar una actualización. Los repositorios históricos se contextualizan por separado y no se han recompilado al renovar su presentación.
 
 ## Preparar una release

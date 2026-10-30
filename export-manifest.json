@@ -4,31 +4,11 @@
     "sha256": "7a3bd2cba4dc2150aadd46083a44160c4e7d30ea26ade820480119b4b0e60532"
   },
   {
-    "path": "README.md",
-    "sha256": "5f6728fa1f0c1db603a2ceb3b1c0ab2cbe2850f1be20e0b38e1861509249ec25"
+    "path": "images/rumbo.png",
+    "sha256": "8e4228a8e4b18daa5575bf2deb6880aecbc9d95b46b5a1a88abf85f92d6c0ba8"
   },
   {
-    "path": "README.es.md",
-    "sha256": "494b20933e40dd99e0e23431a579ea13ba57244cfc92156e1b76d65ba8eb974e"
-  },
-  {
-    "path": "ENGINEERING_GUIDE.md",
-    "sha256": "82f0cf8f24c62009417dc598c73b3b2372baed61b140f7d12ce815ad6b0840fa"
-  },
-  {
-    "path": "ENGINEERING_GUIDE.es.md",
-    "sha256": "b76e108ee51ee1982766bab30552c9e3dc5bbf03d35f3d9a0c1e2eb7852a4cf7"
-  },
-  {
-    "path": "MOBILE_ROADMAP.md",
-    "sha256": "c190ff3b674eb54e973fbcaee4f3fce481b3bdd5c6c5dee514f24e233869f1a9"
-  },
-  {
-    "path": "MOBILE_ROADMAP.es.md",
-    "sha256": "95fef4e1d43ac663be58d2e457993f6a1e78915a4255f9ef5f6072212b331141"
-  },
-  {
-    "path": "DESIGN.md",
-    "sha256": "21f9d97dc53dc43cf2109daf194606c78f736ddbff67eb512297d3cab82b3b22"
+    "path": "images/bitacora.png",
+    "sha256": "a94c81f8d2f058c9718dbbadceab04eaf68420926ab6ccdadc57ceb1e1e09d9a"
   }
 ]

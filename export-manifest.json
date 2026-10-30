@@ -5,42 +5,30 @@
   },
   {
     "path": "README.md",
-    "sha256": "4315595427719d8eb44e1c131972a6ef8086a178e993144e4a4ff66ba4780acb"
+    "sha256": "5f6728fa1f0c1db603a2ceb3b1c0ab2cbe2850f1be20e0b38e1861509249ec25"
   },
   {
     "path": "README.es.md",
-    "sha256": "a159165a5b0eab7943a2ab970015894b314d5b0b2d7618bd023fe3b4cb3ba178"
+    "sha256": "494b20933e40dd99e0e23431a579ea13ba57244cfc92156e1b76d65ba8eb974e"
   },
   {
     "path": "ENGINEERING_GUIDE.md",
-    "sha256": "b2ef6d7f3b1424d375aadaa576e57f17a8db824d581f974c379d93a88567f951"
+    "sha256": "82f0cf8f24c62009417dc598c73b3b2372baed61b140f7d12ce815ad6b0840fa"
   },
   {
     "path": "ENGINEERING_GUIDE.es.md",
-    "sha256": "0867b753f2bcf8623cbe204c8c7c11181af48275f6316d196108ed36fc7b6387"
+    "sha256": "b76e108ee51ee1982766bab30552c9e3dc5bbf03d35f3d9a0c1e2eb7852a4cf7"
   },
   {
     "path": "MOBILE_ROADMAP.md",
-    "sha256": "3f3cf05e1b284a8282070e809c92c60cd4fdf356d6da7cff271eaa986bd240be"
+    "sha256": "c190ff3b674eb54e973fbcaee4f3fce481b3bdd5c6c5dee514f24e233869f1a9"
   },
   {
     "path": "MOBILE_ROADMAP.es.md",
-    "sha256": "373d3e1fe83bc59fbd6e6d4101f81c8d91c122262e14890b715db8c7c7e00ac3"
+    "sha256": "95fef4e1d43ac663be58d2e457993f6a1e78915a4255f9ef5f6072212b331141"
   },
   {
     "path": "DESIGN.md",
-    "sha256": "6a2516bb508190283a5ca533f61042e7bd92cc3f4f6ecf9b50d73f682f68efc7"
-  },
-  {
-    "path": "THIRD_PARTY.md",
-    "sha256": "b63a2780ab40e3c3f910065f93a8d27ebf67ae974270954012349e802a262f7e"
-  },
-  {
-    "path": "images/rumbo.png",
-    "sha256": "9f42565a03a918dcf2c606366d3201c5b9436c3c971c49411ed6da8cf7c1e4d8"
-  },
-  {
-    "path": "images/bitacora.png",
-    "sha256": "768f293a487dc4c4de2fd80c479df60fb400543d80ae26be8194b7b399e42d05"
+    "sha256": "21f9d97dc53dc43cf2109daf194606c78f736ddbff67eb512297d3cab82b3b22"
   }
 ]

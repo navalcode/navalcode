@@ -2,7 +2,7 @@
 
 [Español](MOBILE_ROADMAP.es.md) · [Profile](README.md)
 
-I am extending this collection across mobile platforms through small, runnable examples. Android is the strongest public area today; Flutter adds another implementation of state, persistence and delivery concerns. Native iOS is the next extension.
+I am extending this collection across mobile platforms through small, runnable examples. Android is the strongest public area today; Flutter adds examples of state management, persistence and build configuration. Native iOS is the next extension.
 
 | Area | Current evidence | Next step |
 |---|---|---|
@@ -19,6 +19,6 @@ The example will use fictional tasks and run without accounts or private service
 3. **Platform behavior:** acknowledged persistence after process restart, simulator checks, larger text and accessibility review.
 4. **Delivery:** reproducible build/test commands, macOS CI, reviewed source export and public documentation of the actual results.
 
-Each increment should add behavior that can be inspected and tested. A host-side Swift test will be recorded as a host test; an iOS build, simulator journey and physical-device check require separate evidence. Store distribution is a separate delivery step.
+Each increment should add behavior that can be inspected and tested. A Swift test run on macOS establishes behavior on that host; an iOS build, simulator journey and physical-device check require separate evidence. Store distribution is a separate delivery step.
 
 The iOS work will become a selected project when there is a runnable implementation to review. The existing Android and Flutter repositories keep their current scope and validation history.

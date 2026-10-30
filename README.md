@@ -75,19 +75,11 @@ The [engineering guide](https://github.com/navalcode/navalcode/blob/main/ENGINEE
 
 ## AI-assisted engineering and spec-driven development
 
-I use Codex and Claude to help inspect, implement and review code. I have also contributed to shared engineering methods and project workflows: architecture context, reusable instructions, MCP tools, structured outputs and continuity between sessions. Shared work keeps its attribution; the public demos have their own code and documented scope.
+I use Codex and Claude to explore code, implement changes and review alternatives. I work from repository context, architecture constraints and acceptance criteria, then review the generated code and run the relevant checks. Specifications and decision notes keep the reasoning available to whoever continues the work.
 
-My specifications connect a problem to behavior that can be checked:
+I have also contributed to shared engineering workflows involving reusable instructions, MCP tools and structured outputs. Shared contributions retain their attribution, and professional material stays private.
 
-1. Define the user need, constraints, assumptions and scope.
-2. Describe states, contracts, cancellation, failures and acceptance criteria.
-3. Record implementation decisions and the alternatives considered.
-4. Check the implementation with behavior tests and reproducible commands.
-5. Update the specification, decisions and results so someone else can continue.
-
-I review generated code and check its assumptions against the repository. A proposed implementation and a passing test result are recorded separately.
-
-[Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab) implements part of this workflow. It checks acceptance evidence, JUnit results and structured proposals against a specification, with optional English/Spanish summaries and a read-only MCP stdio adapter. It checks structure and consistency; the reviewer still decides whether the tests establish the intended behavior.
+[Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab) is a working example: it checks required tests against JUnit reports and reviews proposed changes against a specification’s hash, requirements and allowed paths. Its CLI and read-only MCP adapter make those checks available to development tools. Test quality and the implementation itself still require engineering judgment.
 
 ## Earlier work
 

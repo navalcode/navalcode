@@ -75,19 +75,11 @@ La [guía de ingeniería](https://github.com/navalcode/navalcode/blob/main/ENGIN
 
 ## Ingeniería asistida por IA y desarrollo guiado por especificaciones
 
-Utilizo Codex y Claude como ayuda para inspeccionar, implementar y revisar código. También he contribuido a métodos compartidos y flujos de proyecto: contexto de arquitectura, instrucciones reutilizables, herramientas MCP, salidas estructuradas y continuidad entre sesiones. El trabajo compartido mantiene su atribución; las demos públicas tienen código y alcance propios.
+Utilizo Codex y Claude para explorar código, implementar cambios y revisar alternativas. Parto del contexto del repositorio, las restricciones de arquitectura y los criterios de aceptación; después reviso el código generado y ejecuto las comprobaciones pertinentes. Las especificaciones y las notas de decisiones permiten que quien continúe el trabajo entienda el razonamiento.
 
-Mis especificaciones conectan un problema con un comportamiento que se pueda comprobar:
+También he contribuido a flujos de ingeniería compartidos con instrucciones reutilizables, herramientas MCP y salidas estructuradas. Esas contribuciones mantienen su atribución y el material profesional permanece privado.
 
-1. Definir la necesidad del usuario, las restricciones, los supuestos y el alcance.
-2. Describir estados, contratos, cancelación, fallos y criterios de aceptación.
-3. Registrar decisiones de implementación y alternativas consideradas.
-4. Comprobar la implementación con pruebas de comportamiento y comandos reproducibles.
-5. Actualizar la especificación, las decisiones y los resultados para que otra persona pueda continuar.
-
-Reviso el código generado y contrasto sus supuestos con el repositorio. Registro por separado una propuesta de implementación y el resultado de ejecutar las pruebas.
-
-[Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab) implementa una parte de este flujo. Comprueba evidencias de aceptación, resultados JUnit y propuestas estructuradas frente a una especificación. Ofrece resúmenes opcionales en inglés y español y un adaptador MCP stdio de solo lectura. Verifica estructura y coherencia; quien revisa sigue valorando si las pruebas demuestran el comportamiento esperado.
+[Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab) ofrece un ejemplo ejecutable: compara los tests exigidos con informes JUnit y revisa propuestas frente al hash, los requisitos y las rutas permitidas de una especificación. Su CLI y su adaptador MCP de solo lectura permiten integrar estas comprobaciones en herramientas de desarrollo. La calidad de las pruebas y de la implementación sigue requiriendo criterio técnico.
 
 ## Trabajo anterior
 

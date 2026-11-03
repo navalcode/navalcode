@@ -12,6 +12,8 @@ MVVM, MVI and Clean Architecture answer different design questions. For MVVM, in
 
 The lab READMEs provide tested toolchains and commands. Versions are pinned for reproducibility; this is not a claim that every dependency is the newest. Record lint findings and evaluate an upgrade against its actual compatibility and behavior before accepting it. Historical repositories have their own review records. Read each README for the toolchain, commands and checks actually run; a presentation update alone does not establish a working build.
 
+For [Bitácora SwiftUI](https://github.com/navalcode/bitacora-ios), follow the root view through the observable MainActor model, coordinator actor and versioned file store. Read how uncertain writes block another edit until a successful reread. The 43 macOS tests, native XCTest journey and automated accessibility audits establish different evidence; none establishes physical-device behavior or VoiceOver speech.
+
 ## Prepare a release deliberately
 
 Build/tests/lint, optimized release artifacts, runtime smoke tests and store publication are separate gates. Rumbo and Bitácora have optimized Android builds and emulator evidence. A locally debug-signed smoke APK does not establish production signing, physical-device behavior or store approval. No production key or service configuration is included.

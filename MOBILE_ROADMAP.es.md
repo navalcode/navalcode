@@ -2,23 +2,21 @@
 
 [English](MOBILE_ROADMAP.md) · [Perfil](README.es.md)
 
-Estoy ampliando esta colección con ejemplos ejecutables para distintas plataformas móviles. Android es hoy el área pública más sólida; Flutter aporta ejemplos de gestión del estado, persistencia y preparación de builds. iOS nativo es la siguiente ampliación.
+Android sigue siendo el área pública más sólida; Flutter aporta estado, persistencia y configuración para varias plataformas. iOS nativo cuenta ya con una primera demostración ejecutable: [Bitácora SwiftUI](https://github.com/navalcode/bitacora-ios).
 
 | Área | Evidencia actual | Siguiente paso |
 |---|---|---|
-| Android / Kotlin / Compose | [Rumbo](https://github.com/navalcode/rumbo-android) y laboratorios de concurrencia/efectos, con workflows de build y pruebas. | Mantener los ejemplos y ampliar las pruebas cuando cambie el comportamiento. |
-| Flutter / Dart | [Bitácora](https://github.com/navalcode/bitacora-flutter), probada en Android y web. | Mantener explícitos los resultados por plataforma. |
-| iOS nativo / Swift | Planificado; todavía no se presenta aquí una app iOS nativa validada. | Empezar por un núcleo Swift de estado y concurrencia y conectarlo después a un flujo SwiftUI. |
+| Android / Kotlin / Compose | [Rumbo](https://github.com/navalcode/rumbo-android) y laboratorios de concurrencia/efectos, con workflows de build y pruebas. | Mantener evidencia de comportamiento, ciclo de vida y builds optimizadas. |
+| Flutter / Dart | [Bitácora](https://github.com/navalcode/bitacora-flutter), probada en Android y web. | Conservar resultados por plataforma y recuperación del guardado. |
+| iOS nativo / Swift | [Bitácora SwiftUI](https://github.com/navalcode/bitacora-ios): navegación nativa, persistencia en archivo y pruebas de Simulator. | VoiceOver, protección en dispositivo físico y compatibilidad de versiones más amplia. |
 
-## Siguiente entrega: un flujo iOS nativo
+## Incrementos iOS nativos entregados
 
-El ejemplo utilizará tareas ficticias y se ejecutará sin cuentas ni servicios privados. Los incrementos son:
+1. **Núcleo Swift:** un actor coordina estado, cancelación, generaciones de peticiones, plazos y confirmación del guardado. Las pruebas deterministas cubren respuestas tardías, peticiones sustituidas y recuperación.
+2. **Aplicación SwiftUI:** lista, detalle y completar tareas, Back nativo, estados de carga/error y recursos ES/EN. Datos ficticios y sin servicios privados.
+3. **Comportamiento de plataforma:** persistencia confirmada tras terminar el proceso, recuperación de fallos, conservación de IDs desconocidos, recorridos iPhone/iPad Simulator y texto máximo de accesibilidad. XCTest audita lista/detalle en ambos idiomas sin filtrar incidencias.
+4. **Entrega:** comandos reproducibles, paquete de fuentes aislado y workflow macOS/iOS. [Verification](https://github.com/navalcode/bitacora-ios/blob/main/docs/VERIFICATION.md) registra herramientas y resultados locales/alojados realmente ejecutados.
 
-1. **Núcleo Swift:** modelos de tareas, contratos de acceso a datos, control de las peticiones y transiciones de estado. Probar cancelación, respuestas tardías, sustitución de peticiones, fallos de almacenamiento y recuperación.
-2. **Aplicación SwiftUI:** lista, detalle y completar tareas; navegación, estados de carga/error e interfaz en español/inglés.
-3. **Comportamiento de plataforma:** persistencia confirmada tras reiniciar el proceso, comprobaciones en simulador, texto ampliado y revisión de accesibilidad.
-4. **Entrega:** comandos reproducibles de compilación/pruebas, CI macOS, exportación revisada y documentación pública de los resultados reales.
+Las 43 pruebas Swift de núcleo/almacén/presentación se ejecutan en macOS. Los dos casos XCTest nativos acreditan comportamiento de Simulator por separado. No sustituyen VoiceOver, bloqueo/protección en dispositivo físico, firma de producción o aprobación de tienda. Son siguientes validaciones explícitas; no se atribuye experiencia laboral iOS nativa.
 
-Cada incremento debe añadir comportamiento que se pueda leer y probar. Una prueba Swift ejecutada en macOS solo acredita ese entorno; una compilación iOS, un recorrido en simulador y una comprobación física necesitan evidencias separadas. La distribución en tiendas es otra entrega.
-
-El trabajo iOS pasará a la selección de proyectos cuando exista una implementación ejecutable que revisar. Los repositorios Android y Flutter mantienen su alcance y su historial de validación.
+Android y Flutter conservan su historial de validación. Los siguientes incrementos responden a un comportamiento concreto o a una carencia demostrada; no añaden tecnologías para alargar la lista.

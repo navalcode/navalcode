@@ -2,23 +2,21 @@
 
 [Español](MOBILE_ROADMAP.es.md) · [Profile](README.md)
 
-I am extending this collection across mobile platforms through small, runnable examples. Android is the strongest public area today; Flutter adds examples of state management, persistence and build configuration. Native iOS is the next extension.
+Android remains the strongest public area, with Flutter adding cross-platform state, persistence and build configuration. Native iOS now has a first runnable demonstration: [Bitácora SwiftUI](https://github.com/navalcode/bitacora-ios).
 
 | Area | Current evidence | Next step |
 |---|---|---|
-| Android / Kotlin / Compose | [Rumbo](https://github.com/navalcode/rumbo-android) and focused concurrency/effect labs, with build and test workflows. | Maintain the examples and extend tests when behavior changes. |
-| Flutter / Dart | [Bitácora](https://github.com/navalcode/bitacora-flutter), exercised on Android and web. | Keep platform-specific results explicit. |
-| Native iOS / Swift | Planned; no native iOS app is presented as validated here yet. | Start with a Swift state and concurrency core, then connect a SwiftUI flow. |
+| Android / Kotlin / Compose | [Rumbo](https://github.com/navalcode/rumbo-android) and focused concurrency/effect labs, with build and test workflows. | Maintain behavior, lifecycle and optimized-build evidence. |
+| Flutter / Dart | [Bitácora](https://github.com/navalcode/bitacora-flutter), exercised on Android and web. | Preserve platform-specific results and storage recovery. |
+| Native iOS / Swift | [Bitácora SwiftUI](https://github.com/navalcode/bitacora-ios): native navigation, file persistence and Simulator checks. | VoiceOver, physical-device protection and broader version compatibility. |
 
-## Next: one native iOS flow
+## Native iOS increments delivered
 
-The example will use fictional tasks and run without accounts or private services. The increments are:
+1. **Swift core:** an actor coordinates state, cancellation, request generations, deadlines and storage confirmation. Deterministic tests cover late responses, replaced requests and recovery.
+2. **SwiftUI application:** task list, detail and completion, native Back, loading/error states and Spanish/English resources. Data is fictional and needs no private service.
+3. **Platform behavior:** confirmed file persistence across process termination, failure recovery, unknown-ID preservation, iPhone/iPad Simulator journeys and maximum accessibility text. XCTest audits board/detail in both languages without filtering issues.
+4. **Delivery:** reproducible commands, an isolated source package and a macOS/iOS workflow. [Verification](https://github.com/navalcode/bitacora-ios/blob/main/docs/VERIFICATION.md) records the toolchains and actual local/hosted outcomes.
 
-1. **Swift core:** task models, data boundaries, request ownership and state transitions. Test cancellation, late responses, replacement of a request, storage failure and recovery.
-2. **SwiftUI application:** task list, detail and completion; navigation, loading/error states and English/Spanish UI.
-3. **Platform behavior:** acknowledged persistence after process restart, simulator checks, larger text and accessibility review.
-4. **Delivery:** reproducible build/test commands, macOS CI, reviewed source export and public documentation of the actual results.
+The 43 Swift core/storage/presentation tests run on macOS. The two native XCTest cases establish separate Simulator behavior. Neither substitutes for VoiceOver speech/focus testing, physical-device lock/protection, production signing or store approval. Those remain explicit next gates, with no claimed employment experience in native iOS.
 
-Each increment should add behavior that can be inspected and tested. A Swift test run on macOS establishes behavior on that host; an iOS build, simulator journey and physical-device check require separate evidence. Store distribution is a separate delivery step.
-
-The iOS work will become a selected project when there is a runnable implementation to review. The existing Android and Flutter repositories keep their current scope and validation history.
+The Android and Flutter repositories retain their own validation history. Further increments follow concrete behavior or a demonstrated gap; they do not add technologies just to enlarge the list.

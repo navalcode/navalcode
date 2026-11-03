@@ -12,6 +12,8 @@ MVVM, MVI y Clean Architecture responden preguntas distintas. En MVVM, revisa qu
 
 Los README indican las herramientas y los comandos comprobados. Las versiones están fijadas para reproducibilidad; no se afirma que cada dependencia sea la más nueva. Registra los hallazgos de lint y evalúa compatibilidad/comportamiento antes de aceptar una actualización. Los repositorios históricos tienen sus propios registros de revisión. Consulta en cada README las herramientas, los comandos y las comprobaciones realizadas; actualizar la presentación no demuestra por sí solo que el proyecto compile.
 
+En [Bitácora SwiftUI](https://github.com/navalcode/bitacora-ios), sigue la vista raíz, el modelo observable MainActor, el actor coordinador y el almacén de archivo versionado. Comprueba cómo un guardado sin confirmar bloquea otra edición hasta releer correctamente. Las 43 pruebas macOS, el recorrido XCTest nativo y las auditorías de accesibilidad acreditan evidencias distintas; ninguna demuestra comportamiento físico o locución VoiceOver.
+
 ## Preparar una release
 
 Build/tests/lint, artefactos optimizados, arranque y publicación en tienda son comprobaciones distintas. Rumbo y Bitácora tienen builds Android optimizados y evidencia de emulador. Un APK de prueba firmado con clave debug no acredita firma de producción, dispositivo físico o aprobación de tienda. No se incluyen claves o configuración de servicios de producción.

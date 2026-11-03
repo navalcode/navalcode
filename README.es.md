@@ -6,18 +6,21 @@
 
 Desarrollo y mantengo aplicaciones móviles, con una base sólida en Android y experiencia en Flutter. Trabajo en arquitectura, estado asíncrono e integración de SDK. Me interesa especialmente qué ocurre cuando el usuario sale de una pantalla, falla una petición o la app se reinicia con datos guardados.
 
+iOS nativo cuenta ahora con una demostración original Swift/SwiftUI validada en Simulator.
+
 Aquí puedes explorar mis aplicaciones personales, laboratorios técnicos y herramientas de ingeniería. Los ejemplos seleccionados incluyen instrucciones de ejecución, decisiones de diseño y resultados de pruebas. El trabajo profesional que no puedo compartir queda fuera de estos repositorios.
 
-**Empieza por [Rumbo](https://github.com/navalcode/rumbo-android)** para ver desarrollo Android, o por **[Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab)** para conocer un ejemplo de mi trabajo con IA y especificaciones.
+**Empieza por [Rumbo](https://github.com/navalcode/rumbo-android)** para ver desarrollo Android, por **[Bitácora · SwiftUI](https://github.com/navalcode/bitacora-ios)** para ver el ejemplo iOS nativo, o por **[Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab)** para conocer un ejemplo de mi trabajo con IA y especificaciones.
 
 ## Aplicaciones
 
 <p>
 <a href="https://github.com/navalcode/rumbo-android"><img src="images/rumbo.png" alt="Catálogo de escapadas de Rumbo en el emulador Android" width="200"></a>
 <a href="https://github.com/navalcode/bitacora-flutter"><img src="images/bitacora.png" alt="Lista de tareas de Bitácora en el emulador Android" width="200"></a>
+<a href="https://github.com/navalcode/bitacora-ios"><img src="images/bitacora-ios.png" alt="Lista de tareas de Bitácora SwiftUI en iOS Simulator" width="200"></a>
 </p>
 
-Rumbo y Bitácora, ejecutadas en el emulador Android con datos ficticios. Los paisajes de Rumbo son ilustraciones Canvas originales.
+Rumbo y Bitácora Flutter en el emulador Android; Bitácora SwiftUI en iOS Simulator. Todas usan datos ficticios. Los paisajes de Rumbo son ilustraciones Canvas originales.
 
 ## Proyectos seleccionados
 
@@ -28,6 +31,10 @@ Catálogo de escapadas con Kotlin/Compose: búsqueda, detalle, favoritos y plani
 **[Bitácora](https://github.com/navalcode/bitacora-flutter) · Flutter**
 
 App de tareas que confirma el guardado antes de actualizar la pantalla e ignora respuestas de peticiones sustituidas por otras más recientes. Incluye flavors Android e interfaz en inglés y español. [Comprobaciones de Flutter y Android](https://github.com/navalcode/bitacora-flutter/actions/workflows/checks.yml).
+
+**[Bitácora · SwiftUI](https://github.com/navalcode/bitacora-ios) · Demostración iOS nativa**
+
+Un actor Swift coordina peticiones y estado confirmado; SwiftUI gestiona navegación y presentación. Un documento local versionado conserva las completadas al reiniciar el proceso; si un guardado queda sin confirmar, exige reconciliar antes de editar otra tarea. [Build, UI nativa y auditoría automatizada de accesibilidad](https://github.com/navalcode/bitacora-ios/actions/workflows/checks.yml).
 
 **[Vehicle Session Lab](https://github.com/navalcode/vehicle-session-lab) · Kotlin/JVM**
 
@@ -57,9 +64,11 @@ Rumbo reúne estas cuestiones en una app. Su núcleo separa la lógica de domini
 
 Los laboratorios incluyen controles bilingües, capturas de emulador y comandos para ejecutar las pruebas. Cada README distingue los recorridos Android locales de las comprobaciones de su workflow alojado.
 
-## Siguiente plataforma: iOS nativo
+## iOS nativo: un incremento ejecutable
 
-Los ejemplos móviles ejecutables cubren actualmente Android/Kotlin y Flutter/Dart. Tengo previsto añadir un núcleo Swift de estado y concurrencia, seguido de un flujo de tareas con SwiftUI, persistencia y comprobaciones de plataforma iOS. La [hoja de ruta móvil](https://github.com/navalcode/navalcode/blob/main/MOBILE_ROADMAP.es.md) detalla los incrementos. Todavía no hay una aplicación iOS nativa validada en esta colección.
+[Bitácora SwiftUI](https://github.com/navalcode/bitacora-ios) incorpora un recorrido nativo de tareas, persistencia en archivo, recursos ES/EN y evidencia de iPhone/iPad Simulator. Sus 43 pruebas de núcleo/almacén/presentación se ejecutan en macOS; dos casos XCTest comprueban el recorrido nativo y auditorías automatizadas de accesibilidad. El repositorio registra herramientas, fallos y comprobaciones de recuperación reales.
+
+Es una demostración personal original. VoiceOver, protección en dispositivo físico y distribución en tiendas mantienen sus propias validaciones. La [hoja de ruta móvil](https://github.com/navalcode/navalcode/blob/main/MOBILE_ROADMAP.es.md) conserva estos límites y la profundidad demostrada en Android y Flutter.
 
 ## Cómo trabajo
 

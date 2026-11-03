@@ -6,18 +6,21 @@
 
 I develop and maintain mobile applications, with a strong Android background and experience in Flutter. My work includes architecture, asynchronous state and SDK integration. I pay close attention to what happens when a user leaves a screen, a request fails or the app restarts with saved data.
 
+Native iOS is represented by an original Swift/SwiftUI demonstration validated in Simulator.
+
 Here you can explore my personal apps, technical labs and engineering tools. The selected examples include setup instructions, design decisions and test results. Professional work that I cannot share remains outside these repositories.
 
-**Start with [Rumbo](https://github.com/navalcode/rumbo-android)** for Android development, or **[Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab)** for an example of my work with AI and specifications.
+**Start with [Rumbo](https://github.com/navalcode/rumbo-android)** for Android development, **[Bitácora · SwiftUI](https://github.com/navalcode/bitacora-ios)** for the native iOS example, or **[Spec Evidence Lab](https://github.com/navalcode/spec-evidence-lab)** for an example of my work with AI and specifications.
 
 ## Applications
 
 <p>
 <a href="https://github.com/navalcode/rumbo-android"><img src="images/rumbo.png" alt="Rumbo trip catalogue in the Android emulator" width="200"></a>
 <a href="https://github.com/navalcode/bitacora-flutter"><img src="images/bitacora.png" alt="Bitácora task list in the Android emulator" width="200"></a>
+<a href="https://github.com/navalcode/bitacora-ios"><img src="images/bitacora-ios.png" alt="Bitácora SwiftUI task list in the iOS Simulator" width="200"></a>
 </p>
 
-Rumbo and Bitácora, running in the Android emulator with fictional data. Rumbo's landscapes are original Canvas illustrations.
+Rumbo and Bitácora Flutter in the Android emulator; Bitácora SwiftUI in the iOS Simulator. All use fictional data. Rumbo's landscapes are original Canvas illustrations.
 
 ## Selected projects
 
@@ -28,6 +31,10 @@ A Kotlin/Compose trip catalogue with search, detail, favorites and local plannin
 **[Bitácora](https://github.com/navalcode/bitacora-flutter) · Flutter**
 
 A task app that confirms storage writes before updating the screen and ignores responses from superseded requests. Includes Android flavors and English/Spanish UI. [Flutter and Android checks](https://github.com/navalcode/bitacora-flutter/actions/workflows/checks.yml).
+
+**[Bitácora · SwiftUI](https://github.com/navalcode/bitacora-ios) · Native iOS demonstration**
+
+A Swift actor coordinates requests and confirmed state; SwiftUI owns navigation and presentation. A versioned local document preserves completions across process restarts, and uncertain writes require reconciliation before another edit. [Build, native UI and automated accessibility checks](https://github.com/navalcode/bitacora-ios/actions/workflows/checks.yml).
 
 **[Vehicle Session Lab](https://github.com/navalcode/vehicle-session-lab) · Kotlin/JVM**
 
@@ -57,9 +64,11 @@ Rumbo brings these concerns together. Its core separates domain logic from Andro
 
 The labs include bilingual controls, emulator captures and commands for running their tests. Each README distinguishes local Android runs from the checks in its hosted workflow.
 
-## Next platform: native iOS
+## Native iOS: a runnable increment
 
-The runnable mobile examples currently cover Android/Kotlin and Flutter/Dart. I plan to add a Swift core for state and concurrency, then a SwiftUI task flow with persistence and iOS platform checks. The [mobile roadmap](https://github.com/navalcode/navalcode/blob/main/MOBILE_ROADMAP.md) describes those increments. There is no validated native iOS application in this collection yet.
+[Bitácora SwiftUI](https://github.com/navalcode/bitacora-ios) now provides a native task flow, file persistence, Spanish/English resources and iPhone/iPad Simulator evidence. Its 43 core/storage/presentation tests run on macOS; two XCTest cases exercise the native journey and automated accessibility audits. The repository records actual toolchains, failures and recovery checks.
+
+This is an original personal demonstration. VoiceOver, physical-device protection and store distribution remain separate validation steps. The [mobile roadmap](https://github.com/navalcode/navalcode/blob/main/MOBILE_ROADMAP.md) keeps those boundaries explicit while Android and Flutter retain their established depth.
 
 ## How I work
 
